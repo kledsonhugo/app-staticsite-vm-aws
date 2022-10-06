@@ -54,7 +54,7 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
 
 11. Na seção **Detalhes avançados** adicione o texto abaixo no campo **Dados do usuário**.
 
-    > **INFO !!!** Esse passo instala e configura automaticamente o WebServer Apache na instância EC2 e carrega a página web estática html disponível no repositório GitHub [https://github.com/kledsonhugo/app-static-site/tree/main/app](https://github.com/kledsonhugo/app-static-site/tree/main/app).
+    > **INFO !!!** Esse passo instala e configura automaticamente o WebServer Apache na instância EC2 e carrega a página web estática html disponível no repositório GitHub [https://github.com/kledsonhugo/app-static-site-ec2/tree/main/app](https://github.com/kledsonhugo/app-static-site-ec2/tree/main/app).
 
     > **ATENÇÃO !!!** Mantenha as demais opções padrões.
 
@@ -72,8 +72,8 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
     
     # Install application
     cd /tmp
-    git clone https://github.com/kledsonhugo/static-site
-    cp /tmp/static-site/data/index.html /var/www/html/
+    git clone https://github.com/kledsonhugo/app-static-site-ec2
+    cp /tmp/static-site/app/*.html /var/www/html/
     
     # Start Apache service
     service httpd restart
