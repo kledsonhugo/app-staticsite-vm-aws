@@ -73,7 +73,7 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
     # Install application
     cd /tmp
     git clone https://github.com/kledsonhugo/app-static-site-ec2
-    cp /tmp/static-site/app/*.html /var/www/html/
+    cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
     
     # Start Apache service
     service httpd restart
