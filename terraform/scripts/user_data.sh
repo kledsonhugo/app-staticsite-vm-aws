@@ -1,18 +1,18 @@
 #!/bin/bash
     
-# Update with latest packages
+echo "Update with latest packages"
 yum update -y
     
-# Install Apache
+echo "Install Apache"
 yum install -y httpd git
     
-# Enable Apache service to start after reboot
+echo "Enable Apache service to start after reboot"
 sudo systemctl enable httpd
     
-# Install application
+echo "Install application"
 cd /tmp
 git clone https://github.com/kledsonhugo/app-static-site-ec2
 cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
     
-# Start Apache service
+echo "Start Apache service"
 service httpd restart
