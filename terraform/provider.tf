@@ -10,12 +10,12 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket         = "tf-staticsite-ec2-state-v1"
-  #   key            = "terraform.tfstate"
-  #   dynamodb_table = "tf-staticsite-ec2-state-v1"
-  #   region         = "us-east-1"
-  # }
+  backend "s3" {
+    bucket         = "tf-staticsite-ec2-state-v1"
+    key            = "terraform.tfstate"
+    dynamodb_table = "tf-staticsite-ec2-state-v1"
+    region         = "us-east-1"
+  }
 
 }
 
