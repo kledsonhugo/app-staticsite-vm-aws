@@ -11,7 +11,7 @@ sudo systemctl enable httpd
     
 echo "Install application"
 cd /tmp
-git clone https://github.com/danilomartinelli/terraform-hello-world.git
+git clone https://github.com/danilomartinelli/app-static-site-ec2.git
 cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
     
 echo "Start Apache service"
