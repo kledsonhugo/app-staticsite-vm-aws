@@ -11,7 +11,7 @@ sudo systemctl enable httpd
     
 echo "Install application"
 cd /tmp
-git clone https://github.com/kledsonhugo/app-static-site-ec2
+git clone https://github.com/Urielbergamini/app-static-site-ec2/tree/updateapp
 cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
     
 echo "Start Apache service"
