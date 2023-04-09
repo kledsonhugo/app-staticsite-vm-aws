@@ -15,7 +15,7 @@ git clone https://github.com/kledsonhugo/app-static-site-ec2
 cat <<EOF > /var/www/html/index.html
 <html>
     <head>
-        <title>EC2 Site</title>
+        <title>Checkpoint 02 - Ian Soares</title>
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     </head>
     <body>
@@ -38,7 +38,7 @@ EOF
 cat <<EOF > /var/www/html/error.html
 <html>
     <head>
-        <title>S3 Site error</title>
+        <title>Checkpoint 02 - Ian Soares</title>
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     </head>
     <body>
