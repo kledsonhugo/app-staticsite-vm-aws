@@ -13,6 +13,15 @@ echo "Install application"
 cd /tmp
 git clone https://github.com/kledsonhugo/app-static-site-ec2
 cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
-    
+cat <<EOF > /var/www/html/index.html
+<html>
+    <head>
+        <title>FIAP - Checkpoint 02</title>
+    </head>
+    <body>
+        <p>Anderson Sales - Checkpoint 02</p>
+    </body>
+</html>
+EOF
 echo "Start Apache service"
 service httpd restart
