@@ -8,7 +8,7 @@ resource "null_resource" "front_end_apply" {
     inline = [
       "if [ -d /var/www/html ]; then",
       "    rm -rf /tmp/repo-atualizado || echo ''",
-      "    git clone https://github.com/lurickardo/app-static-site-ec2 /tmp/repo-atualizado",
+      "    git clone -b feature/updateWhithoutStopApplication https://github.com/lurickardo/app-static-site-ec2 /tmp/repo-atualizado",
       "    sudo cp -r /tmp/repo-atualizado/app/* /var/www/html/",
       "    sudo systemctl restart httpd",
       "    echo 'Site atualizado!'",
