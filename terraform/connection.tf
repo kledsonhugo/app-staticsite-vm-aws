@@ -1,6 +1,6 @@
 resource "aws_key_pair" "ec2_key_pair" {
   key_name   = "ec2_key_pair"
-  public_key = file("/c/Users/vmart/.ssh/id_rsa.pub")
+  public_key = file("C:\\Users\\vmart\\.ssh\\id_rsa.pub")
 }
 
 resource "null_resource" "front_end_apply" {
@@ -22,7 +22,7 @@ resource "null_resource" "front_end_apply" {
     type        = "ssh"
     user        = "ec2-user"
     host        = aws_instance.instance.public_ip
-    private_key = file("/c/Users/vmart/.ssh/id_rsa")
+    private_key = file("C:\\Users\\vmart\\.ssh\\id_rsa")
   }
 
   triggers = {
