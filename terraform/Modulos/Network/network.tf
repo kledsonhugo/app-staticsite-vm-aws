@@ -1,7 +1,7 @@
 # VPC
 resource "aws_vpc" "vpc" {
-    cidr_block           = "10.0.0.0/16"
-    enable_dns_hostnames = "true"
+    cidr_block           = "${var.vpc_cidr}"
+    enable_dns_hostnames = "${var.vpc_dns_hostnames}"
 }
 
 # INTERNET GATEWAY
@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "igw" {
 # SUBNET
 resource "aws_subnet" "sn_public" {
     vpc_id                  = aws_vpc.vpc.id
-    cidr_block              = "10.0.1.0/24"
+    cidr_block              = "${var.vpc_cidr}"
     map_public_ip_on_launch = "true"
     availability_zone       = "us-east-1a"
 
@@ -68,18 +68,4 @@ resource "aws_security_group" "sg_public" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-}
-
-# EC2 INSTANCE
-
-data "template_file" "user_data" {
-    template = "${file("./scripts/user_data.sh")}"
-}
-
-resource "aws_instance" "instance" {
-    ami                    = "ami-02e136e904f3da870"
-    instance_type          = "t2.micro"
-    subnet_id              = aws_subnet.sn_public.id
-    vpc_security_group_ids = [aws_security_group.sg_public.id]
-    user_data              = "${base64encode(data.template_file.user_data.rendered)}"
 }
