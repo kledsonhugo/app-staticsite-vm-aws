@@ -34,7 +34,7 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
       - **Primeira zona de disponibilidade**: us-east-1a
     - **Número de sub-redes públicas**: 1
     - **Número de sub-redes privadas**: 0
-    - **Personalizar blocos CIDR de sub-redes**: 0
+    - **Personalizar blocos CIDR de sub-redes**
       - **Bloco CIDR da sub-rede pública em us-east-1a**: 10.0.1.0/24
     - **Endpoints da VPC**: Nenhuma<br/><br/>
 
