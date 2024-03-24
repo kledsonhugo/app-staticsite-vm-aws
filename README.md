@@ -1,10 +1,14 @@
 # Lab de uso do AWS EC2
 
-O objetivo desta atividade é explorar na prática os conceitos de comptação em nuvem utilizando o serviço **AWS Elastic Compute Cloud (EC2)**.
+O objetivo desta atividade é explorar na prática os conceitos de comptação e redes de computadores em nuvem utilizando os serviços **AWS Elastic Compute Cloud (EC2)** e **AWS Virtual Private Cloud (VPC)**.
 
-> Referência: [https://aws.amazon.com/pt/ec2/](https://aws.amazon.com/pt/ec2/)
+Referências:
+- [https://aws.amazon.com/pt/ec2/](https://aws.amazon.com/pt/ec2/)
+- [https://aws.amazon.com/pt/vpc/](https://aws.amazon.com/pt/vpc/)
 
 O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como aplicações web, aplicações MiddleWare, aplicações de banco de dados, jogos, aplicações empresariais, entre outras.
+
+O Amazon VPC pode ser utilizado para você iniciar recursos da AWS em uma rede virtual isolada logicamente.
 
 > Referência: [https://aws.amazon.com/pt/getting-started/guides/deploy-webapp-ec2/](https://aws.amazon.com/pt/getting-started/guides/deploy-webapp-ec2/)
 
@@ -81,8 +85,8 @@ O Amazon EC2 pode ser utilizado para hospedar quaisquer aplicações, tais como 
         
     echo "Install application"
     cd /tmp
-    git clone https://github.com/kledsonhugo/app-static-site-ec2
-    cp /tmp/app-static-site-ec2/app/*.html /var/www/html/
+    git clone https://github.com/kledsonhugo/app-staticsite
+    cp /tmp/app-staticsite/*.html /var/www/html/
         
     echo "Start Apache service"
     service httpd restart
